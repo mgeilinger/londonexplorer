@@ -25,8 +25,23 @@
         <aside class="aside">
             <img src="../images/marylebone.png" alt="George Street" width="300" height="300">
         </aside>
+        <div id="overlay" onclick="notesDown(); playAudio();">
+            <div id="notes">
+                <p>A strange preacher had come to town, a large Moroccan-bound Bible under his arm. Scotland Yard is puzzled when the preacher is found stabbed to death on his balcony seat at the Playhouse during a performance of Hamlet.</p>
+                <p>The Duchess of Tallcourt, who accompanied the victim to the Theatre, discovered the body upon returning from the powder room after the interval. The preacher's Bible was gone; and on the floor nearby were a German made cigarette anda a packet of aspiring.</p>
+                <p>It was common knowledge that the Duchess, previously a benefactor of the Bishop of Whittenfroth, had come to support the new preacher's views. This greatly angered the Bishop and the Duke of Tallcourt.</p>
+                <p>The Longworth Acting Troupe was performing the play; the Earl of Longworth in the lead. Longworth, a rascally cad, had been wooing the Duchess' daughter, Anastasia, in hopes of gaining support for his poverty-stricken troupe.</p>
+                <p>You are tasked with discovering a) who killed the preacher, b) the weapon and c) the motive.</p>
+            </div>
+            <div id="map">
+                <img src="../images/map.png">
+            </div>
+        </div>
         <footer class="footer">
-            MAP
+            <ul>
+                <li onclick="notesUp(); playAudio();">CHECK NOTES</li>
+                <li onclick="mapUp(); playAudio();">CHECK MAP</li>
+            </ul>
         </footer>
     </div>
     <script src="../game.js"></script>

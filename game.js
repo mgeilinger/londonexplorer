@@ -1,3 +1,8 @@
+function playAudio() {
+  var audio = new Audio("../audio/notes.mp3");
+  audio.play();
+}
+
 function changeDrop(id, yes=true, no=true) {
     const el = document.getElementById(id);
   
@@ -5,9 +10,27 @@ function changeDrop(id, yes=true, no=true) {
       if (yes == true) {
         el.style.display = "block";
       } if (no == true) {
-        el.style.display = "none";// problem here
+        el.style.display = "none";
       }
     }
+}
+
+function notesUp() {
+  document.getElementById("overlay").style.display = "block";
+  document.getElementById("notes").style.display = "block";
+  document.getElementById("map").style.display = "none";
+}
+
+function mapUp() {
+  document.getElementById("overlay").style.display = "block";
+  document.getElementById("map").style.display = "block";
+  document.getElementById("notes").style.display = "none";
+}
+
+function notesDown() {
+  document.getElementById("overlay").style.display = "none";
+  document.getElementById("notes").style.display = "none";
+  document.getElementById("map").style.display = "none";
 }
 
 function clearData() {
@@ -29,7 +52,3 @@ function eatStore() {
 if(localStorage.getItem('foodEaten') === 'show') {
     eatStore();
 }
-
-// if(typeof(Storage)!=="undefined") {
-    
-// }

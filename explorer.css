@@ -3,8 +3,8 @@
   grid-template: auto 1fr auto / auto 1fr auto;
 }
 
-img {
-  border: 3px dashed black;
+#display {
+  border: 3px solid black;
 }
 
 header {
@@ -57,14 +57,75 @@ footer {
 
 .button {
   border: none;
-  padding: 15px;
-  display: flex;
+  padding: 8px;
+  /* display: flex; */
   width: 150px;
-  text-decoration: none;
-  display: inline-block;
+  /* text-decoration: none; */
+  /* display: inline-block; */
+  border-radius: 12px;
   font-size: 16px;
-  margin: 4px;
+  margin: 6px;
   cursor: pointer;
+}
+
+.button:hover {
+  background-color: #04AA6D;
+  color: white;
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.8); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+#notes{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+#map{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+li {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+li:after {
+  content: "";
+  position: absolute;
+  left:0;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width .3s ease-in-out;
+}
+
+li:hover:after {
+  width: 100%;
 }
 
 #foodEaten {
