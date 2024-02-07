@@ -4,23 +4,25 @@
 }
 
 #display {
-  border: 3px solid black;
+  border: 3px double #798a7b;
 }
 
 header {
   grid-column: 1 / 4;
   font-size: 50px;
   padding: 30px 50px 20px 50px;
-  border: 3px solid black;
-  background-color: #9b96ff;
+  color: #f2faf2;
+  border: 3px double #798a7b;
+  background-color: #13332e;
   text-align: center;
 }
 
 nav {
   grid-column: 1 / 2;
   padding: 40px;
-  border: 3px solid black;
-  background-color: #bcb9ff;
+  color: #ffe6c7;
+  border: 3px double #798a7b;
+  background-color: #13332e;
   margin-top: -3px;
   margin-bottom: -3px;
   text-align: center;
@@ -29,9 +31,10 @@ nav {
 main {
   grid-column: 2 / 3;
   font-size: 18px;
-  border: 3px solid black;
+  color: #282617;
+  border: 3px solid #ebd59e;
   padding: 20px 30px;
-  background-color: #eeeeff;
+  background-color: #ffe6c7;
   margin-top: -3px;
   margin-left: -3px;
   margin-right: -3px;
@@ -41,8 +44,9 @@ main {
 aside {
   grid-column: 3 / 4;
   padding: 40px 25px;
-  border: 3px solid black;
-  background-color: #cdcbff;
+  color: #ffe6c7;
+  border: 3px double #798a7b;
+  background-color: #13332e;
   margin-top: -3px;
   margin-bottom: -3px;
 }
@@ -50,13 +54,16 @@ aside {
 footer {
   grid-column: 1 / 4;
   padding: 25px 50px;
-  border: 3px solid black;
-  background-color: #aca7ff;
+  color: #f2faf2;
+  border: 3px double #798a7b;
+  background-color: #13332e;
   text-align: center;
 }
 
 .button {
   border: none;
+  color: #282617;
+  background-color: #ffe6c7;
   padding: 8px;
   /* display: flex; */
   width: 150px;
@@ -68,9 +75,21 @@ footer {
   cursor: pointer;
 }
 
+.walk_button::before {
+  content: "\1F463   ";
+}
+
+.speak_button::before {
+  content: "\1F5E3   ";
+}
+
+.inspect_button::before {
+  content: "\1F50D   ";
+}
+
 .button:hover {
-  background-color: #04AA6D;
-  color: white;
+  background-color: #ebd59e;
+  color: #24220d;
 }
 
 #overlay {
@@ -120,7 +139,7 @@ li:after {
   top: 100%;
   width: 0;
   height: 2px;
-  background-color: black;
+  background-color: #f2faf2;
   transition: width .3s ease-in-out;
 }
 
