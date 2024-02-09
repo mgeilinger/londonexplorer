@@ -1,18 +1,15 @@
-function playAudio() {
+function playNotes() {
   var audio = new Audio("../audio/notes.mp3");
   audio.play();
 }
 
-function changeDrop(id, yes=true, no=true) {
-    const el = document.getElementById(id);
-  
-    if (el !== null){
-      if (yes == true) {
-        el.style.display = "block";
-      } if (no == true) {
-        el.style.display = "none";
-      }
-    }
+function playWalking() {
+  var audio = new Audio("../audio/walking.mp3");
+  audio.play();
+}
+
+function delay (URL) {
+  setTimeout( function() { window.location = URL }, 2000 );
 }
 
 function notesUp() {
@@ -38,6 +35,18 @@ function clearData() {
 }
 
 console.log(localStorage);
+
+var arrived = localStorage.getItem("firstTime");
+var intro = document.getElementById("intro");
+
+if(!arrived){
+  localStorage.setItem("firstTime","true");
+
+  intro.style.display = "block"
+}
+else {
+  intro.style.display = "none"
+}
 
 function eatStore() {
     var eat = document.getElementById("foodEaten");

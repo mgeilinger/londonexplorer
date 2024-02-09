@@ -1,6 +1,11 @@
 <html>
+    <iframe src="../audio/hyde_park_ambience.mp3" allow="autoplay" style="display:none" id="iframeAudio"></iframe> 
+    <audio id="ambience" style="display:none;" autoplay>
+        <source src="../audio/hyde_park_ambience.mp3" type="audio/mpeg">
+    </audio>
     <div class="parent">
         <head class="head">
+            <link rel="icon" type="image/png" href="../images/logo.png"/>
             <link rel="stylesheet" type="text/css" href="../explorer.css">
             <title>Hyde Park</title>
         </head>
@@ -8,19 +13,19 @@
             HYDE PARK
         </header>
         <nav class="nav">
-            <a href="notting_hill.html">
+            <a href="javascript:delay('notting_hill.html')" onclick="delay(); playWalking();">
                 <button class="button">Notting Hill</button><br>
             </a>
-            <a href="marylebone.html">
+            <a href="javascript:delay('marylebone.html')" onclick="delay(); playWalking();">
                 <button class="button">Marylebone</button><br>
             </a>
-            <a href="mayfair.html">
+            <a href="javascript:delay('mayfair.html')" onclick="delay(); playWalking();">
                 <button class="button">Mayfair</button><br>
             </a>
-            <a href="belgravia.html">
+            <a href="javascript:delay('belgravia.html')" onclick="delay(); playWalking();">
                 <button class="button">Belgravia</button><br>
             </a>
-            <a href="kensington.html">
+            <a href="javascript:delay('kensington.html')" onclick="delay(); playWalking();">
                 <button class="button">Kensington</button><br>
             </a>
             <button class="button" onclick="eatStore()">Eat</button>
@@ -33,7 +38,7 @@
         <aside class="aside">
             <img id="display" src="../images/hyde_park.png" alt="Horse Ride" width="300" height="300">
         </aside>
-        <div id="overlay" onclick="notesDown(); playAudio();">
+        <div id="overlay" onclick="notesDown(); playNotes();">
             <div id="notes">
                 <p>A strange preacher had come to town, a large Moroccan-bound Bible under his arm. Scotland Yard is puzzled when the preacher is found stabbed to death on his balcony seat at the Playhouse during a performance of Hamlet.</p>
                 <p>The Duchess of Tallcourt, who accompanied the victim to the Theatre, discovered the body upon returning from the powder room after the interval. The preacher's Bible was gone; and on the floor nearby were a German made cigarette anda a packet of aspiring.</p>
@@ -47,8 +52,8 @@
         </div>
         <footer class="footer">
             <ul>
-                <li onclick="notesUp(); playAudio();">CHECK NOTES</li>
-                <li onclick="mapUp(); playAudio();">CHECK MAP</li>
+                <li onclick="notesUp(); playNotes();">CHECK NOTES</li>
+                <li onclick="mapUp(); playNotes();">CHECK MAP</li>
             </ul>
         </footer>
     </div>

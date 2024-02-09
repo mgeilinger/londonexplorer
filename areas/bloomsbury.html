@@ -5,16 +5,16 @@
             <title>Bloomsbury</title>
         </head>
         <header class="header">
-            Bloomsbury
+            BLOOMSBURY
         </header>
         <nav class="nav">
-            <a href="fitzrovia.html">
+            <a href="javascript:delay('fitzrovia.html')" onclick="delay(); playWalking();">
                 <button class="button">Fitzrovia</button><br>
             </a>
-            <a href="holborn.html">
+            <a href="javascript:delay('holborn.html')" onclick="delay(); playWalking();">
                 <button class="button">Holborn</button><br>
             </a>
-            <a href="covent_garden.html">
+            <a href="javascript:delay('covent_garden.html')" onclick="delay(); playWalking();">
                 <button class="button">Covent Garden</button>
             </a>
         </nav>
@@ -25,7 +25,7 @@
         <aside class="aside">
             <img id="display" src="../images/bloomsbury.png" alt="British Museum" width="300" height="300">
         </aside>
-        <div id="overlay" onclick="notesDown(); playAudio();">
+        <div id="overlay" onclick="notesDown(); playNotes();">
             <div id="notes">
                 <p>A strange preacher had come to town, a large Moroccan-bound Bible under his arm. Scotland Yard is puzzled when the preacher is found stabbed to death on his balcony seat at the Playhouse during a performance of Hamlet.</p>
                 <p>The Duchess of Tallcourt, who accompanied the victim to the Theatre, discovered the body upon returning from the powder room after the interval. The preacher's Bible was gone; and on the floor nearby were a German made cigarette anda a packet of aspiring.</p>
@@ -39,8 +39,8 @@
         </div>
         <footer class="footer">
             <ul>
-                <li onclick="notesUp(); playAudio();">CHECK NOTES</li>
-                <li onclick="mapUp(); playAudio();">CHECK MAP</li>
+                <li onclick="notesUp(); playNotes();">CHECK NOTES</li>
+                <li onclick="mapUp(); playNotes();">CHECK MAP</li>
             </ul>
         </footer>
     </div>
