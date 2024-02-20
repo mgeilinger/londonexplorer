@@ -1,6 +1,10 @@
 .parent {
-    display: grid;
-    grid-template: auto 1fr auto / auto 1fr auto;
+  display: grid;
+  grid-template: auto 1fr auto / auto 1fr auto;
+}
+
+#display {
+  border: 3px double #798a7b;
 }
 
 header {
@@ -14,92 +18,162 @@ header {
 }
 
 nav {
-    grid-column: 1 / 2;
-    padding: 40px;
-    color: #ffe6c7;
-    border: 3px double #798a7b;
-    background-color: #13332e;
-    margin-top: -3px;
-    margin-bottom: -3px;
-    text-align: center;
-  }
-  
-  main {
-    grid-column: 2 / 3;
-    font-size: 18px;
-    color: #282617;
-    border: 3px solid #ebd59e;
-    padding: 20px 30px;
-    background-color: #ffe6c7;
-    margin-top: -3px;
-    margin-left: -3px;
-    margin-right: -3px;
-    margin-bottom: -3px;
-  }
-  
-  aside {
-    grid-column: 3 / 4;
-    padding: 40px 25px;
-    color: #ffe6c7;
-    border: 3px double #798a7b;
-    background-color: #13332e;
-    margin-top: -3px;
-    margin-bottom: -3px;
-  }
-  
-  footer {
-    grid-column: 1 / 4;
-    padding: 25px 50px;
-    color: #f2faf2;
-    border: 3px double #798a7b;
-    background-color: #13332e;
-    text-align: center;
-  }
-  
-  .button {
-    border: none;
-    color: #282617;
-    background-color: #ffe6c7;
-    padding: 8px;
-    /* display: flex; */
-    width: 150px;
-    /* text-decoration: none; */
-    /* display: inline-block; */
-    border-radius: 12px;
-    font-size: 16px;
-    margin: 6px;
-    cursor: pointer;
-  }
-  
-  .button:hover {
-    background-color: #ebd59e;
-    color: #24220d;
-  }
+  grid-column: 1 / 2;
+  padding: 40px;
+  color: #ffe6c7;
+  border: 3px double #798a7b;
+  background-color: #13332e;
+  margin-top: -3px;
+  margin-bottom: -3px;
+  text-align: center;
+}
 
-  li {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-    font-size: 20px;
-    margin-left: 100px;
-    margin-right: 100px;
-  }
-  
-  li:after {
-    content: "";
-    position: absolute;
-    left:0;
-    top: 100%;
-    width: 0;
-    height: 2px;
-    background-color: #f2faf2;
-    transition: width .3s ease-in-out;
-  }
-  
-  li:hover:after {
-    width: 100%;
-  }
+main {
+  grid-column: 2 / 3;
+  font-size: 18px;
+  color: #282617;
+  border: 3px solid #ebd59e;
+  padding: 20px 30px;
+  background-color: #ffe6c7;
+  margin-top: -3px;
+  margin-left: -3px;
+  margin-right: -3px;
+  margin-bottom: -3px;
+}
 
-  a:visited{
-    color: inherit;
-  }
+aside {
+  grid-column: 3 / 4;
+  padding: 40px 25px;
+  color: #ffe6c7;
+  border: 3px double #798a7b;
+  background-color: #13332e;
+  margin-top: -3px;
+  margin-bottom: -3px;
+}
+
+footer {
+  grid-column: 1 / 4;
+  padding: 25px 50px;
+  color: #f2faf2;
+  border: 3px double #798a7b;
+  background-color: #13332e;
+  text-align: center;
+}
+
+.button {
+  border: none;
+  color: #282617;
+  background-color: #ffe6c7;
+  padding: 8px;
+  /* display: flex; */
+  width: 150px;
+  /* text-decoration: none; */
+  /* display: inline-block; */
+  border-radius: 12px;
+  font-size: 16px;
+  margin: 6px;
+  cursor: pointer;
+}
+
+#nextButton {
+  border: none;
+  color: #282617;
+  background-color: #745630;
+  padding: 8px;
+  /* display: flex; */
+  width: 150px;
+  /* text-decoration: none; */
+  /* display: inline-block; */
+  border-radius: 12px;
+  font-size: 16px;
+  margin: 6px;
+  cursor: pointer;
+}
+
+.walkButton::before {
+  content: "\1F463   ";
+}
+
+.speakButton::before {
+  content: "\1F5E3   ";
+}
+
+.inspectButton::before {
+  content: "\1F50D   ";
+}
+
+.button:hover {
+  background-color: #ebd59e;
+  color: #24220d;
+}
+
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.8); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+#partTwo {
+  display: none;
+}
+
+#convo {
+  display: none; /* Hidden by default */
+}
+
+#locksmithButton {
+  display: none; /* Hidden by default */
+}
+
+#notes{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 20px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+#map{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+
+li {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
+}
+
+li:after {
+  content: "";
+  position: absolute;
+  left:0;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  background-color: #282617;
+  transition: width .3s ease-in-out;
+}
+
+li:hover:after {
+  width: 100%;
+}
+
+a:visited{
+  color: inherit;
+}

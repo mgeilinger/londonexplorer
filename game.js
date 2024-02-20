@@ -8,8 +8,38 @@ function playWalking() {
   audio.play();
 }
 
+function playMale1() {
+  var audio = new Audio("../audio/male_1.mp3");
+  audio.play();
+}
+
+function playMale2() {
+  var audio = new Audio("../audio/male_2.mp3");
+  audio.play();
+}
+
+function playMale3() {
+  var audio = new Audio("../audio/male_3.mp3");
+  audio.play();
+}
+
+function playFemale1() {
+  var audio = new Audio("../audio/female_1.mp3");
+  audio.play();
+}
+
+function playFemale2() {
+  var audio = new Audio("../audio/female_2.mp3");
+  audio.play();
+}
+
+function playFemale4() {
+  var audio = new Audio("../audio/female_4.mp3");
+  audio.play();
+}
+
 function delay (URL) {
-  setTimeout( function() { window.location = URL }, 2000 );
+  setTimeout( function() { window.location = URL }, 1500 );
 }
 
 function notesUp() {
@@ -30,34 +60,17 @@ function notesDown() {
   document.getElementById("map").style.display = "none";
 }
 
+function next() {
+  document.getElementById("partOne").style.display = "none";
+  document.getElementById("partTwo").style.display = "block";
+}
+
 function clearData() {
-    localStorage.clear();
+  localStorage.clear();
+}
+
+function showConvo() {
+  document.getElementById("convo").style.display = "block";
 }
 
 console.log(localStorage);
-
-var arrived = localStorage.getItem("firstTime");
-var intro = document.getElementById("intro");
-
-if(!arrived){
-  localStorage.setItem("firstTime","true");
-
-  intro.style.display = "block"
-}
-else {
-  intro.style.display = "none"
-}
-
-function eatStore() {
-    var eat = document.getElementById("foodEaten");
-    
-    if (eat !== null) {
-        eat.style.display = "block"
-    }
-    
-    localStorage.setItem('foodEaten','show');
-}
-
-if(localStorage.getItem('foodEaten') === 'show') {
-    eatStore();
-}

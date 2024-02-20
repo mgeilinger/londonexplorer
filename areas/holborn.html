@@ -9,26 +9,29 @@
         </header>
         <nav class="nav">
             <a href="javascript:delay('covent_garden.html')" onclick="delay(); playWalking();">
-                <button class="button">Covent Garden</button><br>
+                <button class="button walkButton">Covent Garden</button><br>
             </a>
             <a href="javascript:delay('bloomsbury.html')" onclick="delay(); playWalking();">
-                <button class="button">Bloomsbury</button>
+                <button class="button walkButton">Bloomsbury</button><br>
             </a>
+            <button class="button speakButton" onclick="playMale3(); showConvo();">Pawnbroker owner</button>
         </nav>
         <main class="main">
-            <p>You are on a road lined with boarded up shopfronts. There is a pawnbroker with faded signage sat in the middle of the street. Towards the end is a run down old locksmith.</p>
+            <p>You are on a road lined with boarded up shopfronts. There is a pawnbroker with faded signage sat in the middle of the street. You step inside and examine the owner of the store.</p>
             <p>To the west is Covent Garden and to the north is Bloomsbury.</p>
+            <p id="convo">You enter the pawnbroker's store and ask the owner about the ticket found at the scene of the crime. "That ticket belonged to Maggie Doan," he replies. "She visited the other day to pawn some jewellery."</p>
         </main>
         <aside class="aside">
             <img id="display" src="../images/holborn.png" alt="Raymond Buildings" width="300" height="300">
         </aside>
         <div id="overlay" onclick="notesDown(); playNotes();">
             <div id="notes">
-                <p>A strange preacher had come to town, a large Moroccan-bound Bible under his arm. Scotland Yard is puzzled when the preacher is found stabbed to death on his balcony seat at the Playhouse during a performance of Hamlet.</p>
-                <p>The Duchess of Tallcourt, who accompanied the victim to the Theatre, discovered the body upon returning from the powder room after the interval. The preacher's Bible was gone; and on the floor nearby were a German made cigarette anda a packet of aspiring.</p>
-                <p>It was common knowledge that the Duchess, previously a benefactor of the Bishop of Whittenfroth, had come to support the new preacher's views. This greatly angered the Bishop and the Duke of Tallcourt.</p>
-                <p>The Longworth Acting Troupe was performing the play; the Earl of Longworth in the lead. Longworth, a rascally cad, had been wooing the Duchess' daughter, Anastasia, in hopes of gaining support for his poverty-stricken troupe.</p>
-                <p>You are tasked with discovering a) who killed the preacher, b) the weapon and c) the motive.</p>
+                <p>Yesterday morning, the famous thoroughbred horse, Silver Patch, and his trainer, Oscar Swift, were found dead in the horse’s stall at the Cosgrove Stables.</p>
+                <p>The horse had been poisoned; and the trainer had been hit over the head and stabbed to repeatedly with a sharp object.</p>
+                <p>Silver Patch, so named for the patch of silver hair on his mane, was owned by Sir Reginald Cosgrove, a breeder who also owns four other horses.</p>
+                <p>Person routinely questioned by Inspector Gregson of Scotland Yard include Sir Reginald Cosgrove and his petite wife, Madame Hilda Cosgrove; the Cosgrove cook, Mrs. Maggie Doan; Mrs. Doan’s husband, house painter Henry Doan; and rival horse breeder, Sir Archibald Baxter. Scotland Yard is also looking for one Bobby Jansen, a stable boy who left the Cosgrove’s employ, unhappily, about a month ago.</p>
+                <p>The only clues discovered at the scene of the crime were some broken pieces of glass from the bottom of an ale bottle and a pawnbroker’s ticket. The floor of Silver Patch’s stall also contained a few drops of fresh, black paint.</p>
+                <p>Unable to develop a solid lead, Inspector Gregson has come to you. Gregson wants to know a) who killed the horse and the trainer, b) the weapon used to kill the trainer, and c) the motive.</p>
             </div>
             <div id="map">
                 <img src="../images/map.png">

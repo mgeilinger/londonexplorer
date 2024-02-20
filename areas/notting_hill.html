@@ -9,27 +9,29 @@
         </header>
         <nav class="nav">
             <a href="javascript:delay('hyde_park.html')" onclick="delay(); playWalking();">
-                <button class="button">Hyde Park</button><br>
+                <button class="button walkButton">Hyde Park</button><br>
             </a>
             <a href="javascript:delay('kensington.html')" onclick="delay(); playWalking();">
-                <button class="button">Kensington</button>
+                <button class="button walkButton">Kensington</button><br>
             </a>
+            <button class="button speakButton" onclick="playFemale4(); showConvo();">Bank teller</button>
         </nav>
         <main class="main">
-            <p>You are in a busy street market packed with antiques, clothing and food stalls. Across the road stands a small bank, with two stone columns resting on plinths beside it's entrance.</p>
+            <p>You are in a busy street market packed with antiques, clothing and food stalls. Across the road stands a small bank, with two stone columns resting on plinths beside it's entrance. Inside there is a teller who you may speak to.</p>
             <p>To the east is Hyde Park and to the south is Kensington.</p>
-            <p id="foodEaten">You ate some food.</p>
+            <p id="convo">You enter the bank. The banking hall feels much larger than it appears from the outisde. You head over to the front desk and speak with the teller. You request the files for all the relevant persons currently being questioned in regards to the case. Sorting through the files, you note three important details. Sir Archibald Baxter withdrew all of his money from his main accounts - a considerable sum of money. Sir Reginald Cosgrove had a large insurance policy on his prize horse, Silver Patch. Mrs Doan has recently acquired a reasonable sum of money, and this has allowed her to put down an endowment down on a small apartment in Whitechapel.</p>
         </main>
         <aside class="aside">
             <img id="display" src="../images/notting_hill.png" alt="Portobello Road" width="300" height="300">
         </aside>
         <div id="overlay" onclick="notesDown(); playNotes();">
             <div id="notes">
-                <p>A strange preacher had come to town, a large Moroccan-bound Bible under his arm. Scotland Yard is puzzled when the preacher is found stabbed to death on his balcony seat at the Playhouse during a performance of Hamlet.</p>
-                <p>The Duchess of Tallcourt, who accompanied the victim to the Theatre, discovered the body upon returning from the powder room after the interval. The preacher's Bible was gone; and on the floor nearby were a German made cigarette anda a packet of aspiring.</p>
-                <p>It was common knowledge that the Duchess, previously a benefactor of the Bishop of Whittenfroth, had come to support the new preacher's views. This greatly angered the Bishop and the Duke of Tallcourt.</p>
-                <p>The Longworth Acting Troupe was performing the play; the Earl of Longworth in the lead. Longworth, a rascally cad, had been wooing the Duchess' daughter, Anastasia, in hopes of gaining support for his poverty-stricken troupe.</p>
-                <p>You are tasked with discovering a) who killed the preacher, b) the weapon and c) the motive.</p>
+                <p>Yesterday morning, the famous thoroughbred horse, Silver Patch, and his trainer, Oscar Swift, were found dead in the horse’s stall at the Cosgrove Stables.</p>
+                <p>The horse had been poisoned; and the trainer had been hit over the head and stabbed to repeatedly with a sharp object.</p>
+                <p>Silver Patch, so named for the patch of silver hair on his mane, was owned by Sir Reginald Cosgrove, a breeder who also owns four other horses.</p>
+                <p>Person routinely questioned by Inspector Gregson of Scotland Yard include Sir Reginald Cosgrove and his petite wife, Madame Hilda Cosgrove; the Cosgrove cook, Mrs. Maggie Doan; Mrs. Doan’s husband, house painter Henry Doan; and rival horse breeder, Sir Archibald Baxter. Scotland Yard is also looking for one Bobby Jansen, a stable boy who left the Cosgrove’s employ, unhappily, about a month ago.</p>
+                <p>The only clues discovered at the scene of the crime were some broken pieces of glass from the bottom of an ale bottle and a pawnbroker’s ticket. The floor of Silver Patch’s stall also contained a few drops of fresh, black paint.</p>
+                <p>Unable to develop a solid lead, Inspector Gregson has come to you. Gregson wants to know a) who killed the horse and the trainer, b) the weapon used to kill the trainer, and c) the motive.</p>
             </div>
             <div id="map">
                 <img src="../images/map.png">

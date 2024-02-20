@@ -9,32 +9,35 @@
         </header>
         <nav class="nav">
             <a href="javascript:delay('hyde_park.html')" onclick="delay(); playWalking();">
-                <button class="button">Hyde Park</button><br>
+                <button class="button walkButton">Hyde Park</button><br>
             </a>
             <a href="javascript:delay('marylebone.html')" onclick="delay(); playWalking();">
-                <button class="button">Marylebone</button><br>
+                <button class="button walkButton">Marylebone</button><br>
             </a>
             <a href="javascript:delay('soho.html')" onclick="delay(); playWalking();">
-                <button class="button">Soho</button><br>
+                <button class="button walkButton">Soho</button><br>
             </a>
             <a href="javascript:delay('westminster.html')" onclick="delay(); playWalking();">
-                <button class="button">Westminster</button>
+                <button class="button walkButton">Westminster</button><br>
             </a>
+            <button class="button speakButton" onclick="playFemale1(); showConvo();">Madame Hilda Cosgrove</button>
         </nav>
         <main class="main">
-            <p>You are stood facing the entrance to an apartment building, its grand doorway framed by ornate pillars and a wrought-iron gate. A marble staircase leads up to the imposing front door, flanked by potted plants and meticulously trimmed hedges.</p>
+            <p>You are stood facing the entrance to the Cosgrove's apartment building, its grand doorway framed by ornate pillars and a wrought-iron gate. A marble staircase leads up to the imposing front door, flanked by potted plants and meticulously trimmed hedges.</p>
             <p>To the west is Hyde Park, to the north is Marylebone, to the east is Soho and to the south is Westminster.</p>
+            <p id="convo">You ring the buzzer and, after a short wait, are greated by Madame Hilda. "I'm dreadfully sorry to keep you waiting. I've been searching all morning for my earrings. They were my late mother's. Totally irreplaceable. Have you been able to track down that young upstart Buddy Jensen? Totally useless young man. Never did his job properly, but didn't stop him being profoundly jealous when we hired Oscar. We had to let Buddy go. He was a total liability. Oscar cared for the horses dearly. Yes, it will be very hard to replace him."</p>
         </main>
         <aside class="aside">
             <img id="display" src="../images/mayfair.png" alt="Courtyard" width="300" height="300">
         </aside>
         <div id="overlay" onclick="notesDown(); playNotes();">
             <div id="notes">
-                <p>A strange preacher had come to town, a large Moroccan-bound Bible under his arm. Scotland Yard is puzzled when the preacher is found stabbed to death on his balcony seat at the Playhouse during a performance of Hamlet.</p>
-                <p>The Duchess of Tallcourt, who accompanied the victim to the Theatre, discovered the body upon returning from the powder room after the interval. The preacher's Bible was gone; and on the floor nearby were a German made cigarette anda a packet of aspiring.</p>
-                <p>It was common knowledge that the Duchess, previously a benefactor of the Bishop of Whittenfroth, had come to support the new preacher's views. This greatly angered the Bishop and the Duke of Tallcourt.</p>
-                <p>The Longworth Acting Troupe was performing the play; the Earl of Longworth in the lead. Longworth, a rascally cad, had been wooing the Duchess' daughter, Anastasia, in hopes of gaining support for his poverty-stricken troupe.</p>
-                <p>You are tasked with discovering a) who killed the preacher, b) the weapon and c) the motive.</p>
+                <p>Yesterday morning, the famous thoroughbred horse, Silver Patch, and his trainer, Oscar Swift, were found dead in the horse’s stall at the Cosgrove Stables.</p>
+                <p>The horse had been poisoned; and the trainer had been hit over the head and stabbed to repeatedly with a sharp object.</p>
+                <p>Silver Patch, so named for the patch of silver hair on his mane, was owned by Sir Reginald Cosgrove, a breeder who also owns four other horses.</p>
+                <p>Person routinely questioned by Inspector Gregson of Scotland Yard include Sir Reginald Cosgrove and his petite wife, Madame Hilda Cosgrove; the Cosgrove cook, Mrs. Maggie Doan; Mrs. Doan’s husband, house painter Henry Doan; and rival horse breeder, Sir Archibald Baxter. Scotland Yard is also looking for one Bobby Jansen, a stable boy who left the Cosgrove’s employ, unhappily, about a month ago.</p>
+                <p>The only clues discovered at the scene of the crime were some broken pieces of glass from the bottom of an ale bottle and a pawnbroker’s ticket. The floor of Silver Patch’s stall also contained a few drops of fresh, black paint.</p>
+                <p>Unable to develop a solid lead, Inspector Gregson has come to you. Gregson wants to know a) who killed the horse and the trainer, b) the weapon used to kill the trainer, and c) the motive.</p>
             </div>
             <div id="map">
                 <img src="../images/map.png">

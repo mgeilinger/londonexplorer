@@ -75,15 +75,15 @@ footer {
   cursor: pointer;
 }
 
-.walk_button::before {
+.walkButton::before {
   content: "\1F463   ";
 }
 
-.speak_button::before {
+.speakButton::before {
   content: "\1F5E3   ";
 }
 
-.inspect_button::before {
+.inspectButton::before {
   content: "\1F50D   ";
 }
 
@@ -103,6 +103,18 @@ footer {
   bottom: 0;
   background-color: rgba(0,0,0,0.8); /* Black background with opacity */
   z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+}
+
+#partTwo {
+  display: none;
+}
+
+#convo {
+  display: none; /* Hidden by default */
+}
+
+#locksmithButton {
+  display: none; /* Hidden by default */
 }
 
 #notes{
@@ -143,12 +155,12 @@ li:after {
   transition: width .3s ease-in-out;
 }
 
-li:hover:after {
-  width: 100%;
+#nextButton:after {
+  background-color: #282617;
 }
 
-#foodEaten {
-  display: none;
+li:hover:after {
+  width: 100%;
 }
 
 a:visited{
