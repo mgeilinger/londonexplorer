@@ -73,4 +73,22 @@ function showConvo() {
   document.getElementById("convo").style.display = "block";
 }
 
+// Code to check whether the answer was correct, and then display the corresponding paragraph.
+
+function displayResult() {
+  var killer = document.getElementById("Killer").value;
+  var motive = document.getElementById("Motive").value;
+  
+  localStorage.setItem("killer", killer.value);
+  localStorage.setItem("motive", motive.value);
+
+  if (killer==="Cosgrove" && motive==="insurance") {
+    document.getElementById("correct").style.display = "block";
+    document.getElementById("wrong").style.display = "none";
+  } else {
+    document.getElementById("correct").style.display = "none";
+    document.getElementById("wrong").style.display = "block";
+  }
+}
+
 console.log(localStorage);

@@ -1,0 +1,45 @@
+<html>
+    <div class="parent">
+        <head class="head">
+            <link rel="stylesheet" type="text/css" href="../explorer.css">
+            <title>Scotland Yard</title>
+        </head>
+        <header class="header">
+            SCOTLAND YARD
+        </header>
+        <body>
+            <nav class="nav">
+            </nav>
+            <div>
+                <main class="main">
+                    <div id="partOne">
+                        <p>You enter Scotland Yard and meet Inspector Gregson.</p>
+                        <p>For example, the killer may be "Sherlock Holmes", and the motive is "sleuthing".</p>
+                        <label for="Killer">Killer:</label>
+                        <input type="text" id="Killer" name="Killer">
+                        <label for="Motive">Motive:</label>
+                        <input type="text" id="Motive" name="Motive">
+                        <li id="nextButton" onclick="next(); displayResult();">SUBMIT</li>
+                    </div>
+                    <div id="partTwo">
+                        <p id="correct">Well done! You cracked the case.</p>
+                        <p id="wrong">Unfortunately you made a mistake and the case has not been solved.</p>
+                        <p>Sir Reginald Cosgrove, in dire need of money, concocted a plot to collect money from his large insurance policy on Silver Patch.</p>
+                        <p>Sir Reginald painted over the silver patch on the mane of his prize horse, and painted a silver patch on the mane of Night Dancer, another of his horses. He then switched stalls and poisoned Night Dancer, who now looked like Silver Patch.</p>
+                        <p>Realizing that he would have to take Oscar Switt into his confidence, Sir Reginald arranged for his trainer to meet him at the stables. When Switt refused to go along with Sir Reginald’s plan to kill Night Dancer, Sir Reginald became enraged and killed the trainer, hitting him over the head with an ale bottle and then stabbing him repeatedly with the broken bottle Killer: Sir Reginald Cosgrove; Motive: Insurance.</p>
+                    </div>
+                </main>
+            </div>
+            <aside class="aside">
+                <img id="display" src="../images/scotland_yard.png" alt="" width="300" height="300">
+            </aside>
+            <footer class="footer">
+                <ul>
+                    <li onclick="notesUp(); playNotes();">CHECK NOTES</li>
+                    <li onclick="mapUp(); playNotes();">CHECK MAP</li>
+                </ul>
+            </footer>
+        </body>
+    </div>
+    <script src="../game.js"></script>
+</html>
